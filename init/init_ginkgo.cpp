@@ -72,10 +72,6 @@ void vendor_load_properties()
     // Set camera model for EXIF data
     property_override("persist.vendor.camera.model", model);
 
-    // Set green state for bypassing safetynet
-    property_override("ro.boot.verifiedbootstate", "green");
-    property_override("ro.boot.verifiedstate", "green");
-
     // Set dalvik heap configuration
     string heapstartsize, heapgrowthlimit, heapsize, heapminfree,
 			heapmaxfree, heaptargetutilization;
