@@ -30,5 +30,5 @@
     <dimen name="status_bar_height_landscape">28dp</dimen>
 
     <!-- Height of area above QQS where battery/time go. -->
-    <dimen name="quick_qs_offset_height">28dp</dimen>
+    <dimen name="quick_qs_offset_height">30dp</dimen>
 </resources>
