@@ -28,7 +28,4 @@
     <dimen name="status_bar_height_default">28dp</dimen>
     <dimen name="status_bar_height_portrait">80px</dimen>
     <dimen name="status_bar_height_landscape">28dp</dimen>
-
-    <!-- Height of area above QQS where battery/time go. -->
-    <dimen name="quick_qs_offset_height">30dp</dimen>
 </resources>
