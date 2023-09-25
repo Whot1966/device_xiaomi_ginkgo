@@ -38,7 +38,7 @@ void property_override(string prop, string value)
 
 void vendor_load_properties()
 {
-    string device, model;
+    string device, fingerprint, model;
 
     string region = GetProperty("ro.boot.hwc", "");
     string hwversion = GetProperty("ro.boot.hwversion", "");
@@ -46,9 +46,11 @@ void vendor_load_properties()
     if (region == "Global_B" && (hwversion == "18.31.0" ||
         hwversion == "18.39.0" || hwversion == "19.39.0")) {
         device = "willow";
+        fingerprint = "xiaomi/willow/willow:11/RKQ1.201004.002/V12.5.6.0.RCXMIXM:user/release-keys";
         model = "Redmi Note 8T";
     } else {
         device = "ginkgo";
+        fingerprint = "xiaomi/ginkgo/ginkgo:11/RKQ1.201004.002/V12.5.2.0.RCOMIXM:user/release-keys";
         model = "Redmi Note 8";
     }
 
@@ -61,6 +63,7 @@ void vendor_load_properties()
         property_override(string("ro.product.") + prop + string("device"), device);
         property_override(string("ro.product.") + prop + string("model"), model);
         property_override(string("ro.") + prop + string("build.product"), device);
+        property_override(string("ro.") + prop + string("build.fingerprint"), fingerprint);
     }
 
     // Set hardware revision
